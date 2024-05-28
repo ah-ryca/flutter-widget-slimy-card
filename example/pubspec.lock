@@ -139,9 +139,11 @@ packages:
   slimy_card:
     dependency: "direct main"
     description:
-      path: ".."
-      relative: true
-    source: path
+      path: "."
+      ref: HEAD
+      resolved-ref: "655d6188754324ba72b0cba1fed1d2fb36c0b64c"
+      url: "https://github.com/ah-ryca/flutter-widget-slimy-card.git"
+    source: git
     version: "1.0.4"
   source_span:
     dependency: transitive
