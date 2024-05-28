@@ -57,7 +57,7 @@ class SlimyCard extends StatefulWidget {
 
 class _SlimyCardState extends State<SlimyCard> with TickerProviderStateMixin {
   static const double initialBottomDimension = 100;
-  late bool isSeperated;
+  late bool isSeparated;
   late double bottomDimension;
   late double finalBottomDimension;
   late double gap;
@@ -79,14 +79,14 @@ class _SlimyCardState extends State<SlimyCard> with TickerProviderStateMixin {
   /// It also updates the status of the SlimyCard.
 
   void action() {
-    if (isSeperated) {
-      isSeperated = false;
+    if (isSeparated) {
+      isSeparated = false;
       slimyCard.updateStatus(false);
       arrowAnimController.reverse();
       gap = gapInitial;
       bottomDimension = initialBottomDimension;
     } else {
-      isSeperated = true;
+      isSeparated = true;
       slimyCard.updateStatus(true);
       arrowAnimController.forward();
       gap = gapFinal;
@@ -100,7 +100,7 @@ class _SlimyCardState extends State<SlimyCard> with TickerProviderStateMixin {
   void initState() {
     super.initState();
 
-    isSeperated = false;
+    isSeparated = false;
     activeAnimation = 'Idle';
     finalBottomDimension = widget.bottomCardHeight;
     bottomDimension = initialBottomDimension;
@@ -182,7 +182,7 @@ class _SlimyCardState extends State<SlimyCard> with TickerProviderStateMixin {
                       padding: EdgeInsets.all(10),
                       child: AnimatedOpacity(
                         duration: Duration(milliseconds: 100),
-                        opacity: (isSeperated) ? 1.0 : 0,
+                        opacity: (isSeparated) ? 1.0 : 0,
                         child: bottomCardWidget,
                       ),
                     ),
